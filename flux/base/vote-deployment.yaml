@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: instavote
+  creationTimestamp: null
+  labels:
+    app: vote
+    tier: front
+  name: vote
+spec:  
+  selector:
+    matchLabels:
+      app: vote
+  strategy: {}
+  template:
+    metadata:
+      namespace: instavote
+      creationTimestamp: null
+      labels:
+        app: vote
+        tier: front
+    spec:
+      containers:
+      - image: cfathi/vote
+        name: vote
