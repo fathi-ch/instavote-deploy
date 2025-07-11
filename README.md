@@ -6,7 +6,7 @@ Type of code and their respective paths are,
 
   * flux/*  :  Deployment/Sync Manifests for FluxCD.   
   * kustomize/*  : Either plain YAMLs or additinally environment specific kustomize overlays. 
-  * helm/* : Helm charts source code. 
+
 
 
 ## Code Organisation Strategy
