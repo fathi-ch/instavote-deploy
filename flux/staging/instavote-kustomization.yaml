@@ -1,4 +1,3 @@
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
@@ -6,3 +5,10 @@ metadata:
   namespace: instavote
 spec:
   path: ./kustomize/instavote/staging
+  prune: true
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: vote
+  targetNamespace: instavote
+  validation: client
