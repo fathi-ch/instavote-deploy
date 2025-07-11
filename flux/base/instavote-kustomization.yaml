@@ -16,5 +16,4 @@ spec:
     kind: GitRepository
     name: vote
   targetNamespace: instavote
-  timeout: 3m0s
-  validation: client
+  timeout: 3m0s  
