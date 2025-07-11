@@ -14,7 +14,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: instavote
+    name: vote
   targetNamespace: instavote
   timeout: 3m0s
   validation: client
