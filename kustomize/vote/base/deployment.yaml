@@ -2,24 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: instavote
-  creationTimestamp: null
   labels:
     app: vote
     tier: front
   name: vote
-spec:  
+spec:
   selector:
     matchLabels:
       app: vote
-  strategy: {}
   template:
     metadata:
-      namespace: instavote
-      creationTimestamp: null
       labels:
         app: vote
         tier: front
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9102"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
-      - image: cfathi/vote
-        name: vote
+      - name: vote
+        image: cfathi/vote
+        ports:
+          - containerPort: 80
+            name: http
+          - containerPort: 9102
+            name: metrics
