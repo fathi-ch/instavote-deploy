@@ -2,6 +2,18 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
+
+
+patchesStrategicMerge:
+  - canary.yaml
+
+# patches: 
+#   - path: kustomization.yaml
+#     target:
+#       kind: Kustomization
+#       name: vote
+#       namespace: instavote
+
 images:
 - name: cfathi/vote
   newTag: main-5d5b03ea-1752323955 # {"$imagepolicy":"instavote:vote:tag"}

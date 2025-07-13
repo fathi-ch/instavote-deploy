@@ -1,0 +1,9 @@
+apiVersion: Canary
+kind: Canary
+metadata:
+  name: vote
+spec:
+  analysis:
+    interval: 30s
+    threshold: 3
+    iterations: 5
