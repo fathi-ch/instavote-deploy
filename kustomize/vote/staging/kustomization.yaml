@@ -5,3 +5,7 @@ resources:
 images:
 - name: cfathi/vote
   newTag: main-5d5b03ea-1752323955 # {"$imagepolicy":"instavote:vote:tag"}
+
+replicas:
+  - name: vote
+    count: 0
