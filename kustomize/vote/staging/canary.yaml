@@ -6,10 +6,10 @@ metadata:
 spec:
   analysis:
   ## This is for Progressive 
-  interval: 10s
-  threshold: 10
-  maxWeight: 50
-  stepWeight: 5
+    interval: 10s
+    threshold: 10
+    maxWeight: 50
+    stepWeight: 5
   ## This is for BLUE/GREEN
     # interval: 30s
     # threshold: 3
