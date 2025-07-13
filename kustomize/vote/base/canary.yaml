@@ -66,4 +66,4 @@ spec:
         timeout: 5s
         metadata:
           #replace xx.xx.xx.xx below with External/Cluster IP of ingress
-          cmd: "hey -z 30s -q 10 -c 2 -host vote.example.com http://xx.xx.xx.xx" 
+          cmd: "hey -z 30s -q 10 -c 2 -host vote.local https://localhost:8443" 
